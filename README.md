@@ -37,17 +37,16 @@ Prática SQL/
    Isso cria `pratica.db` com as tabelas **clientes** e **produtos** preenchidas com dados em português (Faker pt_BR).
 
 3. **Praticar SQL**
-
    - Use um cliente SQLite (ex.: [DB Browser for SQLite](https://sqlitebrowser.org/)) abrindo `pratica.db`, ou
    - Execute consultas em Python com o módulo `sqlite3`, ou
    - Escreva e rode suas queries em `query.sql` no editor/ferramenta de sua preferência.
 
 ## Documentação (docs/)
 
-| Arquivo | Conteúdo |
-|--------|----------|
-| [documentacao_sql.md](docs/documentacao_sql.md) | SQL com SQLite: DDL, DML, DQL, TCL; schema fictício (clientes, produtos, pedidos); exemplos de comandos com saídas simuladas; JOINs, agregações, subconsultas. |
-| [documentacao_faker.md](docs/documentacao_faker.md) | Uso da biblioteca Faker: instalação, locale pt_BR, principais métodos (pessoa, endereço, data, texto, números) e dicas. |
+| Arquivo                                             | Conteúdo                                                                                                                                                       |
+| --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [documentacao_sql.md](docs/documentacao_sql.md)     | SQL com SQLite: DDL, DML, DQL, TCL; schema fictício (clientes, produtos, pedidos); exemplos de comandos com saídas simuladas; JOINs, agregações, subconsultas. |
+| [documentacao_faker.md](docs/documentacao_faker.md) | Uso da biblioteca Faker: instalação, locale pt_BR, principais métodos (pessoa, endereço, data, texto, números) e dicas.                                        |
 
 ## Código principal
 
@@ -64,7 +63,6 @@ Prática SQL/
 ### Banco de dados e design
 
 - [Database Design Tutorial](https://www.lucidchart.com/pages/database-diagram-database-design) — conceitos de modelagem e diagramas
-- [Normalização (Wikipedia)](https://pt.wikipedia.org/wiki/Normaliza%C3%A7%C3%A3o_(bases_de_dados)) — formas normais e boas práticas
 - [DB-Engines Ranking](https://db-engines.com/en/ranking) — comparação de SGBDs
 
 ### Prática e exercícios
