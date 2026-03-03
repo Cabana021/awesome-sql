@@ -1,1 +1,5 @@
-Faker>=30.0.0
+Faker==40.5.1
+ruff==0.15.4
+mypy==1.19.1
+pre_commit==4.5.1
+psycopg2==2.9.11
