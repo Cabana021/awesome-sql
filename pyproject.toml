@@ -1,0 +1,48 @@
+[project]
+name = "pratica-sql"
+version = "0.1.0"
+description = "Infraestrutura de inteligência competitiva e monitoramento de preços"
+readme = "README-DESENVOLVIMENTO.md"
+requires-python = ">=3.10"
+dependencies = [
+    "Faker>=40.0.0",
+    "psycopg2>=2.9.0",
+    "ruff>=0.15.0",
+    "mypy>=1.19.0",
+    "pre-commit>=4.0.0",
+]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+src = ["."]
+exclude = [".git", "__pycache__", ".venv", "venv", ".mypy_cache", ".ruff_cache"]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # Pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "UP",  # pyupgrade
+    "SIM", # flake8-simplify
+]
+ignore = [
+    "E501",  # line too long (formatter cuida)
+    "B008",   # do not perform function calls in argument defaults
+]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+strict = true
+
+[[tool.mypy.overrides]]
+module = ["faker.*", "psycopg2.*"]
+ignore_missing_imports = true

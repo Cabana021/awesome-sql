@@ -1,0 +1,20 @@
+# Pre-commit: roda Ruff e Mypy antes de cada commit
+# Docs: https://pre-commit.com/
+
+repos:
+  # Ruff (linter + formatter)
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.4
+    hooks:
+      - id: ruff
+        args: [--fix]
+
+  # Mypy
+  - repo: local
+    hooks:
+      - id: mypy
+        name: mypy
+        entry: mypy
+        language: system
+        types: [python]
+        pass_filenames: false
