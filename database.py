@@ -1,7 +1,6 @@
 import os
 
 import psycopg2
-from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 
 
 def _mensagem_erro(e: BaseException) -> str:
@@ -51,7 +50,6 @@ def inicializar_banco() -> None:
 
             # Conecta no postgres para rodar o setup
             conn_setup = psycopg2.connect(**config_setup)
-            conn_setup.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
             cursor_setup = conn_setup.cursor()
 
             with open(os.path.join("sql", "create_setup.sql"), encoding="utf-8") as f:
@@ -65,7 +63,6 @@ def inicializar_banco() -> None:
                 user=config_setup["user"],
                 password=config_setup["password"],
             )
-            conn_setup.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
             cur = conn_setup.cursor()
             cur.execute("GRANT USAGE ON SCHEMA public TO admin")
             cur.execute("GRANT CREATE ON SCHEMA public TO admin")
